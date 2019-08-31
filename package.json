@@ -27,8 +27,7 @@
     "lint": "tslint -c ./tslint.json -p ./tsconfig.json",
     "lint:fix": "tslint -c ./tslint.json -p ./tsconfig.json --fix",
     "mock-server": "nodemon --watch mock-api/ ./mock-api/server.js",
-    "develop": "npm-run-all -p mock-server start",
-    "postinstall": "ln -sf ../src node_modules/@"
+    "develop": "npm-run-all -p mock-server start"
   },
   "eslintConfig": {
     "extends": "react-app"

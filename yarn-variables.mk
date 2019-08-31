@@ -16,4 +16,4 @@ else
 	REACT_APP_BACKEND_URI = https://localhost:5000
 endif
 
-REACT_APP_TITLE = ATKearney Digital Portfolio
+REACT_APP_ENV_VAR = env_var
