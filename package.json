@@ -29,21 +29,6 @@
     "mock-server": "nodemon --watch mock-api/ ./mock-api/server.js",
     "develop": "npm-run-all -p mock-server start"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
   "devDependencies": {
     "@types/classnames": "2.2.9",
     "@types/enzyme": "3.10.3",
@@ -62,6 +47,8 @@
     "enzyme": "3.10.0",
     "enzyme-adapter-react-16": "1.14.0",
     "express": "4.17.1",
+    "husky": "3.0.4",
+    "lint-staged": "9.2.5",
     "nodemon": "1.19.1",
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2",
@@ -70,5 +57,31 @@
     "tslint-plugin-prettier": "2.0.1",
     "tslint-react": "4.0.0",
     "typescript": "3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": [
+      "make prettier",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

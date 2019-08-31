@@ -1,8 +1,9 @@
+// This file ensures that no 2 features are dependant with each other by checking for imports from other features
+
 import { readFileSync } from 'fs';
 import path from 'path';
-import React from 'react';
 import * as ts from 'typescript';
-import { findFiles, getAppRelativePath } from 'utils/testHelper';
+import { findFiles, getAppRelativePath } from './utils/testHelper';
 
 const featureFileRegexp = /\/src\/features\//;
 

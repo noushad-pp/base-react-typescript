@@ -1,8 +1,12 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "lib": ["dom", "es5", "es6", "es2017"],
-    "baseUrl": "src",
+    "lib": [
+      "dom",
+      "es5",
+      "es6",
+      "es2017"
+    ],
     "allowJs": true,
     "skipLibCheck": false,
     "esModuleInterop": true,
@@ -16,5 +20,11 @@
     "noEmit": true,
     "jsx": "preserve"
   },
-  "include": ["src"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "src/serviceWorker.ts"
+  ]
 }
