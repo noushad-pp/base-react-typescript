@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Examples NotificationList.example.tsx renders without errors: Simple message 1`] = `"<div><div class=\\"successBar\\"><div class=\\"text\\">oh yes</div><i class=\\"close\\"></i></div><div class=\\"warningBar\\"><div class=\\"text\\">oh no</div><i class=\\"close\\"></i></div><div class=\\"errorBar\\"><div class=\\"text\\">oh shi</div><i class=\\"close\\"></i></div></div>"`;

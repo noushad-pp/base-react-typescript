@@ -21,11 +21,9 @@ In the project directory, you can run the following commands using `make` comman
 2. `make install` (_NB: <span style="color:orange">Don't run npm install always run `make install` for consistency in package libarary versions.</span>_)
 3. `make develop`
 4. Make the code changes and when the code is ready to push follow:
-5. `make test`
-6. `make prettier`
-7. `git add`
-8. `git commit` - git commit has a pre-hook which automatically runs prettier and adds the formatted code to the commit incase you have forgotten to run prettier.
-9. `git push`
+5. `git add`
+6. `git commit` - git commit has a pre-hook which automatically runs prettier and adds the formatted code to the commit incase you have forgotten to run prettier.
+7. `git push`
 
 ## Architectural Decision Records
 
