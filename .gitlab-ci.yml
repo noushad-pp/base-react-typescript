@@ -1,0 +1,12 @@
+stages:
+  - vendors
+  - build
+  - test
+  - build-container
+  - deploy
+  - after-deploy
+  - clean
+
+include:
+  - "cicd/yarn/gitlab-ci.yml"
+  - "cicd/docker/gitlab-ci.yml"

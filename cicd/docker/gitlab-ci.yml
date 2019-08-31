@@ -1,0 +1,18 @@
+# Generated automatically by generator-cicd-pipeline
+# DO NOT EDIT MANUALLY
+
+build image:
+  stage: build-container
+  image: docker
+  before_script:
+    - apk --no-cache add make gettext libintl
+  script:
+    - TAG=${CI_PIPELINE_ID} make -f Makefile gzip
+    - TAG=${CI_PIPELINE_ID} make -f cicd/docker/Makefile docker-build docker-tag docker-push
+  dependencies:
+    - "yarn build"
+  except:
+    - schedules
+  tags:
+    - dind-builder
+    - autoscaling

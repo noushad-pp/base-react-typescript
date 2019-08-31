@@ -1,0 +1,45 @@
+# Generated automatically by generator-cicd-pipeline
+# DO NOT EDIT MANUALLY
+
+server {
+    listen 80;
+    server_name _;
+
+    gzip off;
+
+    error_log /dev/stderr;
+    access_log /dev/stdout;
+
+    root /var/www/app;
+    index index.html;
+
+    location / {
+        try_files $uri $uri/ /index.html;
+    }
+
+    location ~* \.(html|xml|json)$ {
+        access_log off;
+        expires -1;
+        gzip_static always;
+    }
+
+    location ~* \.(ico|js|css|map|svg)$ {
+        access_log off;
+        expires max;
+        gzip_static always;
+    }
+
+    location = /index.html {
+        internal;
+
+        if_modified_since off;
+        etag off;
+        add_header Cache-Control 'no-cache, no-store, must-revalidate';
+        gzip_static always;
+    }
+
+    location /api/ {
+        proxy_pass $REVERSE_PROXY_API_URL;
+    }
+
+}
