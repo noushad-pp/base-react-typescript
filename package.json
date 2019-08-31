@@ -1,7 +1,18 @@
 {
-  "name": "atkerney-casestudy-frontend",
+  "name": "base-react-typescript",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:no-watch": "CI=true react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "tslint -c ./tslint.json -p ./tsconfig.json",
+    "lint:fix": "tslint -c ./tslint.json -p ./tsconfig.json --fix",
+    "mock-server": "nodemon --watch mock-api/ ./mock-api/server.js",
+    "develop": "npm-run-all -p mock-server start"
+  },
   "dependencies": {
     "classnames": "2.2.6",
     "connected-react-router": "6.5.2",
@@ -18,16 +29,6 @@
     "redux-persist": "5.10.0",
     "redux-saga": "1.0.5",
     "reselect": "4.0.0"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "CI=true react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "tslint -c ./tslint.json -p ./tsconfig.json",
-    "lint:fix": "tslint -c ./tslint.json -p ./tsconfig.json --fix",
-    "mock-server": "nodemon --watch mock-api/ ./mock-api/server.js",
-    "develop": "npm-run-all -p mock-server start"
   },
   "devDependencies": {
     "@types/classnames": "2.2.9",

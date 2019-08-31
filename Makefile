@@ -22,7 +22,7 @@ prettier: ## fix es-lint and prettier
 	@yarn lint:fix
 
 test: ## execute test in watch mode
-	@yarn test
+	@yarn test:no-watch
 
 coverage: ## build test coverage
 	@yarn test -- --coverage
